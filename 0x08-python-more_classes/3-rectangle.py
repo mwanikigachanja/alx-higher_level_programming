@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defining my rectangle class"""
 
-
 class Rectangle:
     """Rectangle class with setters and getters"""
     def __init__(self, width=0, height=0):
@@ -56,3 +55,16 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return (self.__height + self.__width) * 2
+
+    def __str__(self):
+        """String representation of object
+        of the Rectangle class
+        """
+        if self.__height == 0 or self.__width == 0:
+            return ("")
+        rectangles = []
+        for i in range(self.__height):
+            [rectangle.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rectangles.append("\n")
+        return ("".join(rectangles))
