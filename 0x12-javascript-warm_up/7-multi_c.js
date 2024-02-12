@@ -1,6 +1,11 @@
 #!/usr/bin/node
-const loveC = 'C is fun';
-const x = process.argv[2];
-for (let i = 0; i < x; i++) {
-  console.log(loveC);
+
+let numberOfTimes = parseInt(process.argv[2]);
+if (!isNaN(numberOfTimes)) {
+  while (numberOfTimes > 0) {
+    console.log('C is fun');
+    numberOfTimes -= 1;
+  }
+} else {
+  console.log('Missing number of occurrences');
 }

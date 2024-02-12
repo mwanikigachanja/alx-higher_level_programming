@@ -1,12 +1,16 @@
 #!/usr/bin/node
-const numb = process.argv[2];
 
-function factorial (numb) {
-  if (numb <= 1 || isNaN(numb)) {
-    return 1;
+function factorial (number) {
+  if (number === 1) {
+    return (1);
   } else {
-    return numb * factorial(numb - 1);
+    return (number * factorial(number - 1));
   }
 }
 
-console.log(factorial(numb));
+const value = process.argv[2];
+if (isNaN(value)) {
+  console.log('1');
+} else {
+  console.log(factorial(value));
+}
